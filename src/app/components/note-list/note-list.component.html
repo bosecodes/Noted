@@ -1,0 +1,9 @@
+<app-note-form (noteAdded)="onNoteAdded($event)"></app-note-form>
+
+<ul>
+    <li *ngFor = "let note of notes">
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+        <button (click)="onNoteDeleted(note.id)">Delete</button>
+    </li>
+</ul>
